@@ -1,6 +1,6 @@
-image:https://travis-ci.org/Zomzog/aop.svg?branch=master["Build Status", link="https://travis-ci.org/Zomzog/aop"]
+image:https://travis-ci.org/Zomzog/api-first.svg?branch=master["Build Status", link="https://travis-ci.org/Zomzog/api-first"]
 
-== Presentation of Aspect Oriented Programming
+== Presentation of API-First
 
 Source: /example
 
