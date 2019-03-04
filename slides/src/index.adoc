@@ -1,0 +1,23 @@
+:source-highlighter: highlightjs
+:revealjs_theme: league
+:revealjs_progress: true
+:revealjs_slideNumber: true
+:revealjs_history: true
+:revealjs_customtheme: css/style.css
+:revealjs_showNotes: true
+:imagesdir: /images
+
+= API-first 
+
+include::slides/disclaimer.adoc[]
+
+include::slides/restlet.adoc[]
+
+include::slides/demo.adoc[]
+
+include::slides/kotlin.adoc[]
+
+include::slides/questions.adoc[]
+
+include::slides/thanks.adoc[]
+

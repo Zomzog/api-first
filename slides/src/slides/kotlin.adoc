@@ -1,0 +1,3 @@
+== Works with kotlin
+
+image::hypno.gif[canvas,size=contain]

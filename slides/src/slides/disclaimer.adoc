@@ -1,0 +1,34 @@
+[transition=fade]
+== API-first 
+
+[.nocross]
+by Talend
+[.nocross]
+{nbsp} +
+[.nocross]
+{nbsp} +
+ 
+[transition=fade]
+== API-first 
+
+[.cross]
+by Talend
+
+[.nocross]
+by API Team
+
+[.nocross]
+{nbsp} +
+
+[transition=fade]
+== API-first 
+
+[.cross]
+by Talend
+
+[.cross]
+by API Team
+
+[.nocross]  
+with Openapi Generator
+
