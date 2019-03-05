@@ -5,7 +5,7 @@
 :revealjs_history: true
 :revealjs_customtheme: css/style.css
 :revealjs_showNotes: true
-:imagesdir: /images
+:imagesdir: ./images
 
 = API-first 
 
