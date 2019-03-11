@@ -1,20 +1,84 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>API-first</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="node_modules/reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="css/style.css" id="theme"><link href="node_modules/reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Title</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="node_modules/reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="css/zomzog.css" id="theme"><link href="node_modules/reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "node_modules/reveal.js/css/print/pdf.css" : "node_modules/reveal.js/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>API-first</h1></section><section id="api_first" data-transition="fade"><h2>API-first</h2><div class="paragraph nocross"><p>by Talend</p></div>
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--><link rel="stylesheet" href="css/custom.css"></head><body><div class="reveal"><div class="slides"><section id="title" class="title"><div class="paragraph"><p>Generation</p></div>
+<div class="paragraph"><p>API-First</p></div>
+<aside class="notes"><div class="paragraph"><p>Prevenir du disclamer</p></div></aside></section>
+<section id="api_first" data-transition="fade"><h2>API-First</h2><div class="paragraph nocross"><p>by Talend</p></div>
 <div class="paragraph nocross"><p>&#160;<br></p></div>
 <div class="paragraph nocross"><p>&#160;<br></p></div></section>
-<section id="api_first_2" data-transition="fade"><h2>API-first</h2><div class="paragraph cross"><p>by Talend</p></div>
+<section id="api_first_2" data-transition="fade"><h2>API-First</h2><div class="paragraph cross"><p>by Talend</p></div>
 <div class="paragraph nocross"><p>by API Team</p></div>
 <div class="paragraph nocross"><p>&#160;<br></p></div></section>
-<section id="api_first_3" data-transition="fade"><h2>API-first</h2><div class="paragraph cross"><p>by Talend</p></div>
+<section id="api_first_3" data-transition="fade"><h2>API-First</h2><div class="paragraph cross"><p>by Talend</p></div>
 <div class="paragraph cross"><p>by API Team</p></div>
-<div class="paragraph nocross"><p>with Openapi Generator</p></div></section>
+<div class="paragraph nocross"><p>with Openapi Generator</p></div>
+<aside class="notes"><div class="paragraph"><p>Historique swagger-codegen / fork.</p></div>
+<div class="paragraph"><p>Il est toujours bon citer un grand penseur, si possible disparu</p></div></aside></section>
 <section id="what_does_api_first_mean"><h2>What does API-First mean?</h2><div class="quoteblock"><blockquote><div class="paragraph"><p>API-first software development refers to a set of practices that formally recognize APIs as a first-class artefact of software development, and emphasize their strategic and architectural importance.</p></div></blockquote><div class="attribution">&#8212; Restlet</div></div></section>
-<section id="demo"><h2>Demo</h2></section>
-<section id="works_with_kotlin" data-background-image="./images/hypno.gif" data-background-size="contain"><h2>Works with kotlin</h2></section>
-<section id="questions" data-background-image="./images/questions.png" data-background-size="contain"><h2>Questions</h2></section>
+<section><section id="demo"><h2>Demo</h2></section><section id="server_side"><h2>Server side</h2></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="xml language-xml">&lt;plugin&gt;
+    &lt;groupId&gt;org.openapitools&lt;/groupId&gt;
+    &lt;artifactId&gt;openapi-generator-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;3.3.4&lt;/version&gt;
+    &lt;executions&gt;
+        ...
+    &lt;/executions&gt;
+&lt;/plugin&gt;</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="xml language-xml">&lt;executions&gt;
+    &lt;execution&gt;
+        &lt;goals&gt;
+            &lt;goal&gt;generate&lt;/goal&gt;
+        &lt;/goals&gt;
+        &lt;configuration&gt;
+            ...
+        &lt;/configuration&gt;
+    &lt;/execution&gt;
+&lt;/executions&gt;</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="xml language-xml">&lt;configuration&gt;
+    &lt;inputSpec&gt;
+        ${project.basedir}/src/main/resources/api.yml
+    &lt;/inputSpec&gt;
+    &lt;generatorName&gt;spring&lt;/generatorName&gt;
+    &lt;configOptions&gt;
+        &lt;sourceFolder&gt;src/gen/java/main&lt;/sourceFolder&gt;
+        &lt;interfaceOnly&gt;true&lt;/interfaceOnly&gt;
+    &lt;/configOptions&gt;
+    &lt;modelPackage&gt;bzh.zomzog.apifirst.domain&lt;/modelPackage&gt;
+    &lt;apiPackage&gt;bzh.zomzog.apifirst.api&lt;/apiPackage&gt;
+    &lt;generateSupportingFiles&gt;true&lt;/generateSupportingFiles&gt;
+&lt;/configuration&gt;</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">@RestController
+public class PoniesController implements PoniesApi {
+
+    @Override
+    public ResponseEntity&lt;Pony&gt; getOne(String ponyId) {
+        Pony pony = new Pony();
+        pony.setId( "1" );
+        pony.setName( "Rainbow dash" );
+        pony.setColor( Pony.ColorEnum.RAINBOW );
+        return ResponseEntity.ok( pony );
+    }
+}</code></pre></div></div></section><section id="client_side"><h2>Client side</h2></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="xml language-xml">&lt;configuration&gt;
+    &lt;inputSpec&gt;
+        ${project.basedir}/src/main/resources/api.yml
+    &lt;/inputSpec&gt;
+    &lt;generatorName&gt;java&lt;/generatorName&gt;
+    &lt;library&gt;feign&lt;/library&gt;
+    &lt;configOptions&gt;
+        &lt;sourceFolder&gt;src/gen/java/main&lt;/sourceFolder&gt;
+    &lt;/configOptions&gt;
+    &lt;modelPackage&gt;bzh.zomzog.prez.apifirst.domain&lt;/modelPackage&gt;
+    &lt;apiPackage&gt;bzh.zomzog.prez.apifirst.client.api&lt;/apiPackage&gt;
+    &lt;generateSupportingFiles&gt;true&lt;/generateSupportingFiles&gt;
+&lt;/configuration&gt;</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">ApiClient apiClient = new ApiClient();
+apiClient.setBasePath("http://localhost:8080");
+Pony one = apiClient.buildClient(DefaultApi.class).getOne("1");</code></pre></div></div></section></section>
+<section id="works_with_kotlin" data-background-image="images/hypno.gif" data-background-size="contain"><h2>Works with kotlin</h2>
+<aside class="notes"><div class="paragraph"><p>Faire pause question ?</p></div></aside></section>
+<section id="generation_vs_domain"><h2>Generation vs Domain</h2></section>
+<section id="spring_solution"><h2>Spring solution</h2><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="java language-java">BeanUtils.copyProperties(newObject, oldObject);</code></pre></div></div>
+<div class="ulist"><ul><li class="fragment"><p>Only simple mapping same name, same type</p></li></ul></div></section>
+<section id="mapstruct"><h2>Mapstruct</h2><div class="ulist"><ul><li class="fragment"><p>Generate mapper implementation at compile-time (annotation-processor).</p></li><li class="fragment"><p>Can map immutable, use builder</p></li><li class="fragment"><p>Can be extended</p></li></ul></div></section>
+<section id="demo_2"><h2>Demo</h2></section>
+<section id="questions" data-background-image="images/questions.png" data-background-size="contain"><h2>Questions</h2></section>
 <section id="thanks"><h2>Thanks</h2><div class="paragraph"><p>Source code and slide can be found on <a href="https://github.com/Zomzog/api-first" class="bare">https://github.com/Zomzog/api-first</a></p></div></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
