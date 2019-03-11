@@ -122,11 +122,11 @@
                             <library>feign</library>
                             <configOptions>
                                 <sourceFolder>src/gen/java/main</sourceFolder>
-                                <interfaceOnly>true</interfaceOnly>
                             </configOptions>
                             <modelPackage>bzh.zomzog.prez.apifirst.domain</modelPackage>
                             <apiPackage>bzh.zomzog.prez.apifirst.client.api</apiPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
+                            <generateApiTests>false</generateApiTests>
                         </configuration>
                     </execution>
                 </executions>

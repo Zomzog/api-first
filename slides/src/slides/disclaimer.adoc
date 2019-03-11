@@ -1,5 +1,5 @@
 [transition=fade]
-== API-first 
+== API-First 
 
 [.nocross]
 by Talend
@@ -9,7 +9,7 @@ by Talend
 {nbsp} +
  
 [transition=fade]
-== API-first 
+== API-First 
 
 [.cross]
 by Talend
@@ -21,7 +21,7 @@ by API Team
 {nbsp} +
 
 [transition=fade]
-== API-first 
+== API-First 
 
 [.cross]
 by Talend
@@ -32,3 +32,9 @@ by API Team
 [.nocross]  
 with Openapi Generator
 
+[NOTE.speaker]
+--
+Historique swagger-codegen / fork.
+
+Il est toujours bon citer un grand penseur, si possible disparu
+--

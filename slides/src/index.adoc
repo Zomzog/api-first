@@ -3,11 +3,22 @@
 :revealjs_progress: true
 :revealjs_slideNumber: true
 :revealjs_history: true
-:revealjs_customtheme: css/style.css
+:revealjs_customtheme: css/zomzog.css
 :revealjs_showNotes: true
-:imagesdir: ./images
+:imagesdir: images
+:customcss: css/custom.css
 
-= API-first 
+[%notitle]
+[.title]
+== Title
+Generation 
+
+API-First
+
+[NOTE.speaker]
+--
+Prevenir du disclamer
+--
 
 include::slides/disclaimer.adoc[]
 
@@ -16,6 +27,8 @@ include::slides/restlet.adoc[]
 include::slides/demo.adoc[]
 
 include::slides/kotlin.adoc[]
+
+include::slides/mapstruct.adoc[]
 
 include::slides/questions.adoc[]
 
