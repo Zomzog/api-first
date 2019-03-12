@@ -1,0 +1,36 @@
+== API-First
+
+We need a tool for creating an API definition :
+
+[%notitle]
+== Apigee
+
+image::apigee.png[canvas,size=contain]
+[NOTE.speaker]
+--
+Oups
+--
+
+[%notitle]
+[transition=fade]
+== API-First
+
+image::apidesigner.png[canvas,size=contain]
+
+[transition=fade]
+== And now?
+
+image::travolta.jpg[canvas,size=contain]
+[NOTE.speaker]
+--
+Il faut quelque chose pour faire la glue entre api et code.
+--
+
+
+== OpenAPI-generator
+
+image::openapigenerator-logo.svg[canvas,size=contain]
+[NOTE.speaker]
+--
+Historique swagger-codegen / fork.
+--

@@ -1,0 +1,8 @@
+== Works with kotlin
+
+image::hypno.gif[canvas,size=contain]
+
+[NOTE.speaker]
+--
+Faire pause question ?
+--

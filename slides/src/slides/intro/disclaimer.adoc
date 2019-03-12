@@ -1,0 +1,39 @@
+[transition=fade]
+== API-First 
+
+[.nocross]
+by Talend
+[.nocross]
+{nbsp} +
+[.nocross]
+{nbsp} +
+ 
+[transition=fade]
+== API-First 
+
+[.cross]
+by Talend
+
+[.nocross]
+by API Team
+
+[.nocross]
+{nbsp} +
+
+[transition=fade]
+== API-First 
+
+[.cross]
+by Talend
+
+[.cross]
+by API Team
+
+[.nocross]  
+with Openapi Generator
+
+[NOTE.speaker]
+--
+
+Il est toujours bon citer un grand penseur, si possible disparu
+--

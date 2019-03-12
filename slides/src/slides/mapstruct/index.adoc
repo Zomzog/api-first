@@ -1,0 +1,28 @@
+== Generation vs Domain
+[NOTE.speaker]
+--
+Vous allez me dire mon model c'est plus qu'un pojo bidon.
+
+Couche anti corruption -> mapping
+--
+
+== Spring solution
+
+[source, java]
+----    
+BeanUtils.copyProperties(newObject, oldObject);
+----    
+
+
+[fragment]#Only simple mapping same name, same type#
+
+== Mapstruct
+
+[fragment]#Generate mapper implementation at compile-time (annotation-processor).#
+
+[fragment]#Can map immutable, use builder#
+
+[fragment]#Can be extended#
+
+== Demo
+

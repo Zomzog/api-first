@@ -20,17 +20,11 @@ API-First
 Prevenir du disclamer
 --
 
-include::slides/disclaimer.adoc[]
+include::slides/intro/index.adoc[]
 
-include::slides/restlet.adoc[]
+include::slides/openapi/index.adoc[]
 
-include::slides/demo.adoc[]
+include::slides/mapstruct/index.adoc[]
 
-include::slides/kotlin.adoc[]
-
-include::slides/mapstruct.adoc[]
-
-include::slides/questions.adoc[]
-
-include::slides/thanks.adoc[]
+include::slides/conclusion/index.adoc[]
 
