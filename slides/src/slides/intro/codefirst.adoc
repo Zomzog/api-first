@@ -1,14 +1,17 @@
 == Code-first
 
-[fragment]#Lib springfox-swagger2#
-
+[.green]
 [fragment]#Quicker, easier, more seductive#
 
-[fragment]#Hard to properly version#
+[.green]
+[fragment]#Lib springfox-swagger2#
+
+[.red]
+[fragment]#Dev must work before others can#
 
 [NOTE.speaker]
 --
-C'est ce qu'on faisait en soap (sauf les fous qui on fait un wsdl a la main).
+C'est ce qu'on faisait en soap (sauf les fondus qui on fait un wsdl a la main).
 
 Trop facile de faire des changements api/model.
 --

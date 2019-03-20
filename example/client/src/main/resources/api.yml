@@ -94,3 +94,7 @@ components:
             - "RED"
             - "RAINBOW"
             - "BLUE"
+        CreatedAt:
+          type: "integer"
+          format: "int64"
+          description: "Timestamp"

@@ -13,6 +13,10 @@ Couche anti corruption -> mapping
 BeanUtils.copyProperties(newObject, oldObject);
 ----    
 
+[NOTE.speaker]
+--
+Long -> Date
+--
 
 [fragment]#Only simple mapping same name, same type#
 
@@ -20,9 +24,11 @@ BeanUtils.copyProperties(newObject, oldObject);
 
 [fragment]#Generate mapper implementation at compile-time (annotation-processor).#
 
+[fragment]#Can do transformation#
+
 [fragment]#Can map immutable, use builder#
 
 [fragment]#Can be extended#
 
-== Demo
+include::demo.adoc[]
 

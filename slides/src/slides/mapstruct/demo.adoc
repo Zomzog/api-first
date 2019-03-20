@@ -1,0 +1,85 @@
+
+== Demo
+
+[transition=fade]
+[%notitle]
+=== 1
+[source, xml, numbered]
+----
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct-jdk8</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct-processor</artifactId>
+    <scope>provided</scope>
+</dependency>
+----
+
+[transition=fade]
+[%notitle]
+=== 2
+[source, java, numbered]
+----    
+@Data
+public class MyPony {
+
+    private long id;
+    private String name;
+    private String color;
+    private LocalDateTime createdAt;
+    private String hiddenField;
+}
+----
+
+[transition=fade]
+[%notitle]
+=== 3
+[source, java, numbered]
+----    
+@Mapper
+public abstract class MyPonyMapper {
+
+    public abstract MyPony map(Pony pony);
+}
+----
+
+[transition=fade]
+[%notitle]
+=== 4
+[source, java, numbered]
+----    
+public LocalDateTime map(Long l) {
+    return LocalDateTime.ofEpochSecond(l, 0, ZoneOffset.UTC);
+}
+----
+
+[transition=fade]
+[%notitle]
+=== 5
+[source, java, numbered]
+----    
+@Mapper(componentModel = "spring", 
+        injectionStrategy = InjectionStrategy.CONSTRUCTOR,
+        uses = NativeMapper.class)
+----
+
+[transition=fade]
+[%notitle]
+=== 6
+[source, java, numbered]
+----    
+@Mapping(target = "id", ignore = true)
+public abstract MyPony update(Pony pony, @MappingTarget MyPony myPony);
+----
+
+[transition=fade]
+[%notitle]
+=== 7
+[source, java, numbered]
+----    
+@Builder
+@Data
+public class MyPony {
+----

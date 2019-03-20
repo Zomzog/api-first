@@ -1,0 +1,21 @@
+== I want API-First!
+
+image::letsgo.gif[]
+
+== Fix API specification
+
+Springfox is less than perfect
+
+[%step]
+
+* Spring Pageable
+
+* Generics
+
+* Nicknames
+
+== One step at a time
+
+[fragment]#Generate DTO and map them to your domain#
+
+[fragment]#Generate and replace API#

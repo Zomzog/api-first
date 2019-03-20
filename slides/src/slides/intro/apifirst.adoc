@@ -1,5 +1,22 @@
 == API-First
+[.green]
+[fragment]#Start with a contract#
 
+[.green]
+[fragment]#Everyone can mock from the contract#
+
+[.red]
+[fragment]#Slower to evolve#
+
+[NOTE.speaker]
+--
+Contrat important
+
+Chaque evolutions créer une nouvelle version du contrat
+--
+
+
+== How to
 We need a tool for creating an API definition :
 
 [%notitle]
