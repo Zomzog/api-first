@@ -5,11 +5,40 @@ link.href = window.location.search.match( /print-pdf/gi ) ? "node_modules/reveal
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section id="generation_vs_domain"><h2>Generation vs Domain</h2><aside class="notes"><div class="paragraph"><p>Vous allez me dire mon model c&#8217;est plus qu&#8217;un pojo bidon.</p></div>
 <div class="paragraph"><p>Couche anti corruption &#8594; mapping</p></div></aside></section>
 <section id="spring_solution"><h2>Spring solution</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">BeanUtils.copyProperties(newObject, oldObject);</code></pre></div></div>
+<aside class="notes"><div class="paragraph"><p>Long &#8594; Date</p></div></aside>
 <div class="paragraph"><p><span class="fragment">Only simple mapping same name, same type</span></p></div></section>
 <section id="mapstruct"><h2>Mapstruct</h2><div class="paragraph"><p><span class="fragment">Generate mapper implementation at compile-time (annotation-processor).</span></p></div>
+<div class="paragraph"><p><span class="fragment">Can do transformation</span></p></div>
 <div class="paragraph"><p><span class="fragment">Can map immutable, use builder</span></p></div>
 <div class="paragraph"><p><span class="fragment">Can be extended</span></p></div></section>
-<section id="demo"><h2>Demo</h2></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<section><section id="demo"><h2>Demo</h2></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
+    &lt;artifactId&gt;mapstruct-jdk8&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
+    &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Data
+public class MyPony {
+
+    private long id;
+    private String name;
+    private String color;
+    private LocalDateTime createdAt;
+    private String hiddenField;
+}</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Mapper
+public abstract class MyPonyMapper {
+
+    public abstract MyPony map(Pony pony);
+}</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">public LocalDateTime map(Long l) {
+    return LocalDateTime.ofEpochSecond(l, 0, ZoneOffset.UTC);
+}</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Mapper(componentModel = "spring",
+        injectionStrategy = InjectionStrategy.CONSTRUCTOR,
+        uses = NativeMapper.class)</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Mapping(target = "id", ignore = true)
+public abstract MyPony update(Pony pony, @MappingTarget MyPony myPony);</code></pre></div></div></section><section id="" data-transition="fade"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Builder
+@Data
+public class MyPony {</code></pre></div></div></section></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

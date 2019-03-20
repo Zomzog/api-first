@@ -2,7 +2,12 @@
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "node_modules/reveal.js/css/print/pdf.css" : "node_modules/reveal.js/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section id="api_first"><h2>API-First</h2><div class="paragraph"><p>We need a tool for creating an API definition :</p></div></section>
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="node_modules/reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section id="api_first"><h2>API-First</h2><div class="paragraph green"><p><span class="fragment">Start with a contract</span></p></div>
+<div class="paragraph green"><p><span class="fragment">Everyone can mock from the contract</span></p></div>
+<div class="paragraph red"><p><span class="fragment">Slower to evolve</span></p></div>
+<aside class="notes"><div class="paragraph"><p>Contrat important</p></div>
+<div class="paragraph"><p>Chaque evolutions créer une nouvelle version du contrat</p></div></aside></section>
+<section id="how_to"><h2>How to</h2><div class="paragraph"><p>We need a tool for creating an API definition :</p></div></section>
 <section id="apigee" data-background-image="apigee.png" data-background-size="contain">
 <aside class="notes"><div class="paragraph"><p>Oups</p></div></aside></section>
 <section id="api_first_2" data-transition="fade" data-background-image="apidesigner.png" data-background-size="contain"></section>
