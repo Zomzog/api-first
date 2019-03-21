@@ -13,6 +13,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <div class="paragraph nocross"><p>with Openapi Generator</p></div>
 <aside class="notes"><div class="paragraph"><p>Il est toujours bon citer un grand penseur, si possible disparu</p></div></aside></section>
 <section id="what_does_api_first_mean"><h2>What does API-First mean?</h2><div class="quoteblock"><blockquote><div class="paragraph"><p>API-first software development refers to a set of practices that formally recognize APIs as a first-class artefact of software development, and emphasize their strategic and architectural importance.</p></div></blockquote><div class="attribution">&#8212; Restlet</div></div></section>
+<section id="code_first"><h2>Code-first</h2><div class="paragraph green"><p><span class="fragment">Quicker, easier, more seductive</span></p></div>
+<div class="paragraph green"><p><span class="fragment">Lib springfox-swagger2</span></p></div>
+<div class="paragraph red"><p><span class="fragment">Dev must work before others can</span></p></div>
+<aside class="notes"><div class="paragraph"><p>C&#8217;est ce qu&#8217;on faisait en soap (sauf les fondus qui on fait un wsdl a la main).</p></div>
+<div class="paragraph"><p>Trop facile de faire des changements api/model.</p></div></aside></section>
 <section id="api_first_4"><h2>API-First</h2><div class="paragraph green"><p><span class="fragment">Start with a contract</span></p></div>
 <div class="paragraph green"><p><span class="fragment">Everyone can mock from the contract</span></p></div>
 <div class="paragraph red"><p><span class="fragment">Slower to evolve</span></p></div>
@@ -25,12 +30,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section id="and_now" data-transition="fade" data-background-image="travolta.jpg" data-background-size="contain"><h2>And now?</h2>
 <aside class="notes"><div class="paragraph"><p>Il faut quelque chose pour faire la glue entre api et code.</p></div></aside></section>
 <section id="openapi_generator" data-background-image="openapigenerator-logo.svg" data-background-size="contain"><h2>OpenAPI-generator</h2>
-<aside class="notes"><div class="paragraph"><p>Historique swagger-codegen / fork.</p></div></aside></section>
-<section id="code_first"><h2>Code-first</h2><div class="paragraph green"><p><span class="fragment">Quicker, easier, more seductive</span></p></div>
-<div class="paragraph green"><p><span class="fragment">Lib springfox-swagger2</span></p></div>
-<div class="paragraph red"><p><span class="fragment">Dev must work before others can</span></p></div>
-<aside class="notes"><div class="paragraph"><p>C&#8217;est ce qu&#8217;on faisait en soap (sauf les fondus qui on fait un wsdl a la main).</p></div>
-<div class="paragraph"><p>Trop facile de faire des changements api/model.</p></div></aside></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+<aside class="notes"><div class="paragraph"><p>Historique swagger-codegen / fork.</p></div></aside></section></div></div><script src="node_modules/reveal.js/lib/js/head.min.js"></script><script src="node_modules/reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,
