@@ -8,3 +8,8 @@
 
 [fragment]#Show love with your APIs#
 
+
+[NOTE.speaker]
+--
+Plagiat mockito
+--

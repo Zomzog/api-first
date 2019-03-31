@@ -1,18 +1,19 @@
-== I want API-First!
+== To API-First and beyond  !
 
-image::letsgo.gif[]
+image::toInfinity.gif[]
 
 == Fix API specification
 
 Springfox is less than perfect
 
-[%step]
+[.red]
+[fragment]#Spring Pageable#
 
-* Spring Pageable
+[.red]
+[fragment]#Generics#
 
-* Generics
-
-* Nicknames
+[.red]
+[fragment]#Nicknames#
 
 == One step at a time
 

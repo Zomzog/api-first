@@ -30,7 +30,7 @@ by Talend
 by API Team
 
 [.nocross]  
-with Openapi Generator
+by me
 
 [NOTE.speaker]
 --

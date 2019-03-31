@@ -4,5 +4,7 @@ image::hypno.gif[canvas,size=contain]
 
 [NOTE.speaker]
 --
-Faire pause question ?
+Beaucoup generateurs
+
+Beaucoup d'options (pattern delegate)
 --
